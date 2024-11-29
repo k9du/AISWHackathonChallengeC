@@ -7,13 +7,19 @@ services:
     working_dir: /app
     volumes:
       - .:/app
+      - ../resources/challenge_c/3_OpenDroneMap:/data
     ports:
       - "8000:8000"
     environment:
       - PYTHONUNBUFFERED=1  # Ensures logs are output in real-time
-    command: >
+    secrets:
+      - django_env
+    command: > #   python test.py
       sh -c "
       pip install --no-cache-dir -r requirements.txt &&
-      python manage.py migrate &&
-      python manage.py runserver 0.0.0.0:8000"
+      python app/test.py
+      "
 
+secrets:
+  django_env:
+    file: .env
