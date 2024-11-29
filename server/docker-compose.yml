@@ -17,8 +17,9 @@ services:
     command: > #   python test.py
       sh -c "
       pip install --no-cache-dir -r requirements.txt &&
-      python app/test.py
-      "
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+
 
 secrets:
   django_env:
