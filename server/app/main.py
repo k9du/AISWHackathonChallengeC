@@ -63,42 +63,47 @@ def generate_metadata(file_name, file_path):
 
     return response.choices[0].message.content
 
+ttls_dir = os.path.join(folder_path, "ttls")
+if not os.path.exists(ttls_dir):
+    os.makedirs(ttls_dir)
+
 # Iterate through files in the folder
 metadata_results = []
-for file_name in os.listdir(folder_path):
-    file_path = os.path.join(folder_path, file_name)
-    
-    # Ensure it's a file (not a folder)
-    if os.path.isfile(file_path):
-        # Ensure file extension is allowed
-        extension = os.path.splitext(file_name)[1][1:]
+for root, dirs, files in os.walk(folder_path):
+    print(root)
+    for file_name in files:
 
-        if extension not in allowed_extensions:
-            print(f"Skipping {file_name} as it has an invalid extension")
-            continue
-        
-        if extension == "pdf":
-            try:
-                # Extract text from PDF
-                txt_file_path = extract_text_from_pdf(file_path)
-                metadata = generate_metadata(file_name, txt_file_path)
+      file_path = os.path.join(root, file_name)
+      
+      # Ensure it's a file (not a folder)
+      if os.path.isfile(file_path):
+          # Ensure file extension is allowed
+          extension = os.path.splitext(file_name)[1][1:]
 
-                # Remove the temporary .txt file
-                os.remove(txt_file_path)
+          if extension not in allowed_extensions:
+              print(f"Skipping {file_name} as it has an invalid extension")
+              continue
+          
+          if extension == "pdf":
+              try:
+                  # Extract text from PDF
+                  txt_file_path = extract_text_from_pdf(file_path)
+                  metadata = generate_metadata(file_name, txt_file_path)
 
-            except Exception as e:
-                print(f"Error processing {file_name}: {e}")
-        else:
-            metadata = generate_metadata(file_name, file_path)
+                  # Remove the temporary .txt file
+                  os.remove(txt_file_path)
 
-        try:
-            # Generate metadata
+              except Exception as e:
+                  print(f"Error processing {file_name}: {e}")
+          else:
+              metadata = generate_metadata(file_name, file_path)
 
-            ttl_file_path = os.path.join(folder_path, f"ttls/{os.path.splitext(file_name)[0]}.ttl")
-            with open(ttl_file_path, "w", encoding="utf-8") as ttl_file:
-                ttl_file.write(metadata)
+          try:
+              ttl_file_path = os.path.join(ttls_dir, f"{os.path.splitext(file_name)[0]}.ttl")
+              with open(ttl_file_path, "w", encoding="utf-8") as ttl_file:
+                  ttl_file.write(metadata)
 
-            print(f"Metadata for {file_name} generated successfully")
-        except Exception as e:
-            print(f"Error processing {file_name}: {e}")
+              print(f"Metadata for {file_name} generated successfully")
+          except Exception as e:
+              print(f"Error processing {file_name}: {e}")
 
