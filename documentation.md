@@ -3,4 +3,5 @@
 1. Create a python virutal environment by running `python3 -m venv venv`
 2. Activate the environment by running `source venv/bin/activate` on linux or `.\venv\Scripts\activate`
 3. Install the requirements by running `pip install -r requirements.txt`
-4. 
+4. Create a .env file under the server directory.
+5. Add your OPENAI_API_KEY and a FOLDER_PATH variable which defined where the data is located, in this case AISWHackathonChallengeC/resources/challenge_c/3_OpenDroneMap
