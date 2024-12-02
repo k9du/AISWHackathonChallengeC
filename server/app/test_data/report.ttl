@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+
+<file-XWa15rW3VV7rmseMqMY1K1>
+    dct:title "Agricultural Report 2023" ;
+    dct:creator "John Doe" ;
+    dct:subject agrovoc:Crop_Production ;
+    dct:description "This report provides an analysis of crop production trends and forecasting for the year 2023." ;
+    dct:publisher "Agricultural Research Institute" ;
+    dct:date "2023-10-01" ;
+    dct:type "Text" ;
+    dct:format "application/pdf" ;
+    dct:identifier "file-XWa15rW3VV7rmseMqMY1K1" ;
+    dct:language "en" ;
+    dct:relation "Related to '2023 Agricultural Trends'" ;
+    dct:coverage "Global" ;
+    dct:rights "Copyright © 2023 Agricultural Research Institute" ;
+    dcat:catalog_title "Agricultural Research Catalog" ;
+    dcat:dataset_title "Annual Agricultural Report" ;
+    dcat:distribution_format "PDF" ;
+    dcat:accessURL "http://example.com/report.pdf" ;
+    dcat:issued "2023-10-01" ;
+    dcat:relationship "Related to dataset '2023 Agricultural Trends'" .

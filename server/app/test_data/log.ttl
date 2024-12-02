@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix agvoc: <http://aims.fao.org/aos/agrovoc/> .
+
+<http://example.org/dataset/file-Y8ebZYqiur5pVPktSf9L1b>
+    dct:title "Log Data File" ;
+    dct:creator "John Doe" ;
+    dct:subject agvoc:Crop_Production ;
+    dct:description "A JSON file containing log data related to agricultural practices." ;
+    dct:publisher "Agricultural Research Institute" ;
+    dct:date "2023-10-01" ;
+    dct:type "Dataset" ;
+    dct:format "application/json" ;
+    dct:identifier "file-Y8ebZYqiur5pVPktSf9L1b" ;
+    dct:language "en" ;
+    dct:relation "http://example.org/dataset/file-AnotherFileID" ;
+    dct:coverage "Global" ;
+    dct:rights "CC BY 4.0" ;
+    dcat:catalog_title "Agricultural Data Catalog" ;
+    dcat:dataset_title "Log Data Files Collection" ;
+    dcat:distribution_format "JSON" ;
+    dcat:accessURL "http://example.org/dataset/log.json" ;
+    dcat:issued "2023-10-01" ;
+    dcat:relationship <http://example.org/dataset/file-RelatedFileID> .

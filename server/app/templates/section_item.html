@@ -1,0 +1,48 @@
+<section>
+    <div class="dataset-section" id={{section.db_id}}>
+        <h2>{{ section.title }}</h2>
+        {% if section.title is defined and section.title is not none %}
+            <p><strong>Title:</strong> {{ section.title }}</p>
+        {% endif %}
+        {% if section.creator is defined and section.creator is not none %}
+            <p><strong>Creator:</strong> {{ section.creator }}</p>
+        {% endif %}
+        {% if section.subject is defined and section.subject is not none %}
+            <p><strong>Subject:</strong> {{ section.subject }}</p>
+        {% endif %}
+        {% if section.description is defined and section.description is not none %}
+            <p><strong>Description:</strong> {{ section.description }}</p>
+        {% endif %}
+        {% if section.publisher is defined and section.publisher is not none %}
+            <p><strong>Publisher:</strong> {{ section.publisher }}</p>
+        {% endif %}
+        {% if section.contributor is defined and section.contributor is not none %}
+            <p><strong>Contributor:</strong> {{ section.contributor }}</p>
+        {% endif %}
+        {% if section.date is defined and section.date is not none %}
+            <p><strong>Date:</strong> {{ section.date }}</p>
+        {% endif %}
+        {% if section.data_type is defined and section.data_type is not none %}
+            <p><strong>Type:</strong> {{ section.data_type }}</p>
+        {% endif %}
+        {% if section.data_format is defined and section.data_format is not none %}
+            <p><strong>Format:</strong> {{ section.data_format }}</p>
+        {% endif %}
+        {% if section.id is defined and section.id is not none %}
+            <p><strong>ID:</strong> {{ section.id }}</p>
+        {% endif %}
+        {% if section.source is defined and section.source is not none %}
+            <p><strong>Source:</strong> {{ section.source }}</p>
+        {% endif %}
+        {% if section.language is defined and section.language is not none %}
+            <p><strong>Language:</strong> {{ section.language }}</p>
+        {% endif %}
+        {% if section.relation is defined and section.relation is not none %}
+            <p><strong>Relation:</strong> {{ section.relation }}</p>
+        {% endif %}
+        {% if section.rights is defined and section.rights is not none %}
+            <p><strong>Rights:</strong> {{ section.rights }}</p>
+        {% endif %}
+    </div>
+    <hr>
+<section>

@@ -1,0 +1,24 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix mcdi: <http://purl.org/mcdi#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/catalog> a dcat:Catalog ;
+    dct:title "Test Data Catalog" ;
+    dct:description "A sample data catalog for demonstration purposes" ;
+    dcat:dataset <http://example.org/dataset/1> .
+
+<http://example.org/dataset/1> a dcat:Dataset ;
+    dct:title "Sample Dataset 1" ;
+    dct:description "A dataset containing sample metadata" ;
+    mcdi:metadataStandard <http://example.org/standard/iso123> ;
+    mcdi:dataFormat "JSON" ;
+    dct:publisher <http://example.org/organization/1> .
+
+<http://example.org/organization/1> a dct:Agent ;
+    dct:title "Example Organization" ;
+    dct:identifier "ORG123" .
+
+<http://example.org/standard/iso123> a mcdi:MetadataStandard ;
+    dct:title "ISO 123 Metadata Standard" ;
+    dct:issued "2023-01-01"^^xsd:date .

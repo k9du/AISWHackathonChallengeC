@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metadata marketplace</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Left menu styles */
+        .menu {
+            width: 250px;
+            background-color: #f4f4f4;
+            overflow-y: auto;
+            padding: 15px;
+            border-right: 1px solid #ccc;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        /* Content area styles */
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Sticky header inside the content */
+        .content h1 {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            margin: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0; /* Make it stick to the top */
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Left menu -->
+    <nav class="menu">
+        {% for section in sections %}
+            {% include "nav_bar_section_item.html" %}
+        {% endfor %}
+    </nav>
+
+    <!-- Main content area -->
+    <div class="content">
+        <h1>Metadata marketplace</h1>
+        <hr>
+        {% for section in sections %}
+            {% include "section_item.html" %}
+        {% endfor %}
+    </div>
+</body>
+</html>
