@@ -70,7 +70,6 @@ if not os.path.exists(ttls_dir):
 # Iterate through files in the folder
 metadata_results = []
 for root, dirs, files in os.walk(folder_path):
-    print(root)
     for file_name in files:
 
       file_path = os.path.join(root, file_name)
