@@ -5,3 +5,8 @@
 3. Install the requirements by running `pip install -r requirements.txt`
 4. Create a .env file under the server directory.
 5. Add your OPENAI_API_KEY and a FOLDER_PATH variable which defined where the data is located, in this case AISWHackathonChallengeC/resources/challenge_c/3_OpenDroneMap
+
+6. To run python server run `flask --app app.py run` 
+7. Go to localhost:5000 and enjoy your life.
+
+

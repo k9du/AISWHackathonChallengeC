@@ -1,8 +1,11 @@
 import os
 import ttl_deserializer
 
+from dotenv import load_dotenv
+
 def create_section_data(): 
-    dir= "./test_data/"
+    load_dotenv()
+    dir = os.getenv("FOLDER_PATH")
     sections = []
     i = 0
     for file_name in os.listdir(dir):

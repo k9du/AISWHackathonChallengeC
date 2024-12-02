@@ -12,6 +12,10 @@
             font-family: Arial, sans-serif;
         }
 
+        header {
+            position: static;
+        }
+
         /* Left menu styles */
         .menu {
             width: 250px;
@@ -43,22 +47,12 @@
 
         /* Sticky header inside the content */
         .content h1 {
-            position: sticky;
+            position: static;
             top: 0;
             background: white;
             padding: 10px;
             border-bottom: 1px solid #ccc;
             margin: 0;
-        }
-
-        header {
-            position: sticky;
-            top: 0; /* Make it stick to the top */
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            z-index: 1000; /* Ensure it stays above other content */
         }
 
     </style>
