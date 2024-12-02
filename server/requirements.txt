@@ -2,3 +2,4 @@ Flask==3.1.0
 python-dotenv
 openai
 rdflib
+PyMuPDF
