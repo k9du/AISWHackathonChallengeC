@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/datasets/images.json> a dcat:Dataset ;
+    dct:title "Images Dataset" ;
+    dct:creator "Agricultural Data Team" ;
+    dct:subject <http://aims.fao.org/standards/agrovoc/agrovoc-thesaurus> ;
+    skos:prefLabel "Agricultural Images" ;
+    dct:description "A collection of images related to various agricultural practices and crop types." ;
+    dct:publisher "Agricultural Research Institute" ;
+    dct:issued "2023-10-01" ;
+    dct:type "Dataset" ;
+    dct:format "application/json" ;
+    dct:identifier "file-K63kFicH6wWS2dJ7Hg2FJy" ;
+    dct:language "en" ;
+    dct:relation <http://example.org/datasets/related-dataset> ;
+    dct:coverage "Global" ;
+    dct:rights "Open Access" ;
+    dcat:datasetTitle "Agricultural Images Dataset" ;
+    dcat:distributionFormat "JSON" ;
+    dcat:accessURL "http://example.org/datasets/images.json" ;
+    dcat:issued "2023-10-01" ;
+    dcat:relationship <http://example.org/datasets/related-dataset> .

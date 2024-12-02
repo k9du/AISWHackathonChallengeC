@@ -1,0 +1,27 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+
+<file-ApkexdnGh671CjdCWLHnKd>
+    a dct:Dataset ;
+    dct:title "cameras.json" ;
+    dct:creator "John Doe" ;
+    dct:subject agrovoc:Camera ;
+    dct:description "This file contains data related to various types of cameras used in agricultural practices." ;
+    dct:publisher "Agricultural Data Center" ;
+    dct:date "2023-10-01" ;
+    dct:type "Dataset" ;
+    dct:format "application/json" ;
+    dct:identifier "file-ApkexdnGh671CjdCWLHnKd" ;
+    dct:language "en" ;
+    dct:relation "Related dataset: <file-AnotherDatasetID>" ;
+    dct:coverage "Global" ;
+    dct:rights "Copyright © 2023 Agricultural Data Center" ;
+
+    dcat:catalog_title "Agricultural Data Catalog" ;
+    dcat:dataset_title "Datasets on Agricultural Equipment" ;
+    dcat:distribution_format "application/json" ;
+    dcat:accessURL "http://example.org/datasets/cameras.json" ;
+    dcat:issued "2023-10-01" ;
+    dcat:distribution <http://example.org/datasets/cameras.json> ;
+    dcat:relationship <file-AnotherDatasetID> .

@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix agrovoc: <http://aims.fao.org/aos/agrovoc/>) .
+
+<file-Q5HcH2nR2B98yAHXZDrwA8>
+    dct:title "Texture Model of Geo Material 0002" ;
+    dct:creator "Unknown Creator" ; 
+    dct:subject agrovoc:Soil , agrovoc:GeologicalMaterial ;
+    dct:description "This file contains a textured model representing geo materials for agricultural analysis." ;
+    dct:publisher "Example Publisher" ;
+    dct:date "2023-10-10" ;
+    dct:type "Image" ;
+    dct:format "PNG" ;
+    dct:identifier "file-Q5HcH2nR2B98yAHXZDrwA8" ;
+    dct:language "en" ;
+    dct:relation "Related dataset identifier" ;
+    dct:coverage "Global" ;
+    dct:rights "Public Domain" ;
+    dcat:catalog_title "Agricultural Data Catalog" ;
+    dcat:dataset_title "Geo Material Textures" ;
+    dcat:distribution_format "image/png" ;
+    dcat:accessURL "http://example.org/datasets/odm_textured_model_geo_material0002" ;
+    dcat:issued "2023-10-10" ;
+    dcat:relationship <file-Q5HcH2nR2B98yAHXZDrwA8> ;
